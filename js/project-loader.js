@@ -53,11 +53,15 @@ function renderProjectDetails(project) {
 function renderSlider(images) {
     return `
         <div class="slides">
-            ${images.map(img => `
-                <div class="slide">
-                    <img src="${img}" alt="Иллюстрация проекта">
-                </div>
-            `).join('')}
+            ${images.map((img, index) => {
+                if(index == 0) 
+                    return `<div class="slide active">
+                                <img src="${img}" alt="Иллюстрация проекта">
+                            </div>`; 
+                else return `<div class="slide">
+                                <img src="${img}" alt="Иллюстрация проекта">
+                            </div>`;
+            }).join('')}
             <button class="slider-btn prev">❮</button>
             <button class="slider-btn next">❯</button>
         </div>

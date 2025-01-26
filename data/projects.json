@@ -1,0 +1,77 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "slug": "LakeOfSpirits",
+            "ru": {
+                "title": "Озеро предков",
+                "description": "Добро пожаловать в мир славянской мифологии! Погрузитесь в захватывающее приключение с Озеро предков, уникальной стратегией, которая переносит вас в старославянский мир древних мифов. Создай своё поселение, защищайте его от беспощадных варваров и взывайте к богам, чтобы они помогли одолеть ваших противников.",
+                "release_date": "Q2 2025",
+                "platforms": "PC"
+            },
+            "en": {
+                "title": "Lake Of Spirits",
+                "description": "Description",
+                "release_date": "Q2 2025",
+                "platforms": "PC"
+            },
+            "images": [
+                "assets/projects/LakeOfSpirits/LakeOfSpirits-1.jpg",
+                "assets/projects/LakeOfSpirits/LakeOfSpirits-2.jpg",
+                "assets/projects/LakeOfSpirits/LakeOfSpirits-3.jpg"
+            ],
+            "links": {
+                "demo": "#",
+                "trailer": "#"
+            }
+        },
+        {
+            "id": 2,
+            "slug": "VirtualWorkshop-ChemistryDLC",
+            "ru": {
+                "title": "Виртуальная мастерская / Химия",
+                "description": "Наше решение представляет из себя виртуальное пространство, в котором пользователи смогут проводить эксперименты и играться с химическими элементами в виртуальной реальности. Изучить таблицу менделеева, увидеть строение атома, смешать элементы вместе - все это можно попробовать у нас в мастерской! Это не только интересно и увлекательно, но и полезно! Это может стать профориентационным и образовательным контентом.",
+                "release_date": "Q3 2025",
+                "platforms": "VR"
+            },
+            "en": {
+                "title": "VirtualWorkshop / ChemistryDLC",
+                "description": "Our solution is a virtual space where users can develop critical thinking skills, conduct experiments, and play with chemical elements in virtual reality. Study the periodic table, see the structure of the atom, mix the elements together - all this can be tried in our workshop! It's not only interesting and exciting, but also useful! This can become career-oriented educational content.",
+                "release_date": "Q3 2025",
+                "platforms": "VR"
+            },
+            "images": [
+                "assets/projects/VirtualWorkshop/VirtualWorkshop-Chemistry-1.jpg",
+                "assets/projects/VirtualWorkshop/VirtualWorkshop-Chemistry-2.png"
+            ],
+            "links": {
+                "demo": "#",
+                "trailer": "#"
+            }
+        },
+        
+        {
+            "id": 3,
+            "slug": "Platform",
+            "ru": {
+                "title": "Платформа",
+                "description": "Скоро анонс...",
+                "release_date": "Q4 2025",
+                "platforms": "VR, PC"
+            },
+            "en": {
+                "title": "Platform",
+                "description": "Soon announcement...",
+                "release_date": "Q4 2025",
+                "platforms": "VR, PC"
+            },
+            "images": [
+                "assets/LogoRounded.png"
+            ],
+            "links": {
+                "demo": "#",
+                "trailer": "#"
+            }
+        }
+    ]
+}

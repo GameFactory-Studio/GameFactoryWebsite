@@ -1,0 +1,119 @@
+/* Стили для страницы проекта */
+#project-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    /* padding: 0 2rem; */
+    padding: 1.5em;
+    display: grid;
+    gap: 3rem;
+}
+
+.project-slider {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(47, 172, 102, 0.2);
+}
+
+.slides {
+    position: relative;
+    height: 500px;
+}
+
+.slide {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(47, 172, 102, 0.7);
+    border: none;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.slider-btn:hover {
+    background: var(--primary-color);
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: var(--primary-color);
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-meta {
+    display: flex;
+    gap: 2rem;
+    color: var(--primary-color);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.back-btn {
+    background: var(--section-bg);
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        margin-top: 6rem;
+    }
+    
+    .slides {
+        height: 300px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+}

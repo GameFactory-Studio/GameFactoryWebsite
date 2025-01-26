@@ -1,0 +1,166 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* или фиксированная высота, если нужно */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.mini-slider {
+    flex: 0 0 auto; /* Не растягиваем слайдер */
+}
+
+.project-info {
+    flex: 1; /* Растягиваем блок с информацией */
+    padding: 1.2rem;
+    overflow: hidden; /* Обрезаем текст, если он превышает высоту */
+}
+
+.project-info h3 {
+    margin-top: 0;
+}
+
+.project-info p {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Ограничиваем количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: start;
+}
+
+.project-actions {
+    flex: 0 0 auto; /* Не растягиваем блок с кнопкой */
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* .project-info {
+    padding: 1.5rem;
+}
+.project-actions {
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+.project-info p{
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+} */
+
+
+
+
+.mini-slider {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.mini-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: scale(0.95);
+}
+
+.mini-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.mini-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mini-slide:hover img {
+    transform: scale(1.05);
+}
+
+.mini-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.mini-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mini-dot.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Анимация карточки */
+.game-card:hover .mini-slide img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .mini-slider {
+        height: 200px;
+    }
+    
+    .mini-dot {
+        width: 8px;
+        height: 8px;
+    }
+}

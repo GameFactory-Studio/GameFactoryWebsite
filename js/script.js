@@ -1,29 +1,70 @@
 const translations = {
     ru: {
         logoText: "ИгроФабрика",
-        games: "Игры",
+        projects: "Проекты",
         about: "О нас",
         contact: "Контакты",
         heroTitle: "Создаём игры мечты",
-        heroSubtitle: "Профессиональная разработка игр с 2018 года",
+        heroSubtitle: "Профессиональная разработка игр с 2024 года",
         viewProjects: "Наши проекты",
         ourGames: "Наши игры",
-        aboutText: "ИгроФабрика - современная студия разработки...",
-        contactText: "Контакты: contact@gamefabrika.ru",
-        copyright: "© 2023 ИгроФабрика. Все права защищены"
+        ourProjects: "Наши проекты",
+        aboutText: 'Мы крутое сообщество создателей ПО и контента "ИгроФабрика" 😎 Переходи на нашу сторону! 😉.',
+        contactText: "Контакты: *В разработке*",
+        copyright: "© 2025 ИгроФабрика. Все права защищены",
+        socialTitle: "Мы в соцсетях",
+        socialVK: "ВКонтакте",
+        socialTG: "Telegram",
+        socialYT: "YouTube",
+        usefulLinks: "Полезные ссылки",
+        linkDocs: "Документация",
+        linkBlog: "Блог разработчиков",
+        linkCareers: "Вакансии",
+        cooperation: "Сотрудничество",
+        linksTitle: "Полезное",
+        linkPress: "Пресс-центр",
+        projectTitle: "Детали проекта",
+        projectName: "Космические Рейнджеры",
+        releaseDate: "Дата выхода:",
+        platforms: "Платформы:",
+        playDemo: "Играть в демо",
+        viewTrailer: "Смотреть трейлер",
+        backToProjects: "← К проектам",
+        viewDetails: "Подробнее",
+        noProjects: "Проекты не найдены",
     },
     en: {
         logoText: "GameFactory",
-        games: "Games",
+        projects: "Projects",
         about: "About",
         contact: "Contact",
         heroTitle: "Creating Dream Games",
-        heroSubtitle: "Professional game development since 2018",
+        heroSubtitle: "Professional game development since 2024",
         viewProjects: "Our Projects",
-        ourGames: "Our Games",
-        aboutText: "GameFactory is a modern development studio...",
-        contactText: "Contacts: contact@gamefabrika.ru",
-        copyright: "© 2023 GameFactory. All rights reserved"
+        ourProjects: "Our Projects",
+        aboutText: 'We are a cool community of creators of software and content "Game Factory" 😎 Come over to our side! 😉.',
+        contactText: "Contacts: *Develop*",
+        copyright: "© 2025 GameFactory. All rights reserved",
+        socialTitle: "Follow Us",
+        socialVK: "VKontakte",
+        socialTG: "Telegram",
+        socialYT: "YouTube",
+        usefulLinks: "Useful Links",
+        linkDocs: "Documentation",
+        linkBlog: "Dev Blog",
+        linkCareers: "Careers",
+        cooperation: "Partnership",
+        linksTitle: "Resources",
+        linkPress: "Press Center",
+        projectTitle: "Project Details",
+        projectName: "Space Rangers",
+        releaseDate: "Release Date:",
+        platforms: "Platforms:",
+        playDemo: "Play Demo",
+        viewTrailer: "Watch Trailer",
+        backToProjects: "← Back to Projects",
+        viewDetails: "View Details",
+        noProjects: "No projects found",
     }
 };
 
@@ -51,21 +92,9 @@ function applyTranslations(lang) {
 }
 
 function updateLangButton(lang) {
-    document.querySelector('.lang-toggle').textContent = lang.toUpperCase();
+    //document.querySelector('.lang-toggle').textContent = lang.toUpperCase();
 }
 
-// Инициализация
-document.addEventListener('DOMContentLoaded', () => {
-    // Тема
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    
-    // Язык
-    const savedLang = localStorage.getItem('language') || 'ru';
-    document.documentElement.setAttribute('lang', savedLang);
-    applyTranslations(savedLang);
-    updateLangButton(savedLang);
-});
 // Инициализация переключателей
 function initSwitches() {
     const themeToggle = document.getElementById('themeToggle');
@@ -105,5 +134,15 @@ function updateLangSwitch(lang) {
 // В init функциях
 document.addEventListener('DOMContentLoaded', () => {
     initSwitches();
-    // Остальная инициализация
+    
+    // Тема
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Язык
+    const savedLang = localStorage.getItem('language') || 'ru';
+    document.documentElement.setAttribute('lang', savedLang);
+    applyTranslations(savedLang);
+    updateLangButton(savedLang);
 });
+

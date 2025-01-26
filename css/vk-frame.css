@@ -1,0 +1,25 @@
+/* Добавьте в styles.css */
+.vk-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(47, 172, 102, 0.2);
+}
+
+.vk-frame {
+    border: none;
+    min-height: 400px;
+    background: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+    .vk-container {
+        border-radius: 10px;
+        margin: 0 1rem;
+    }
+    
+    .vk-frame {
+        height: 500px;
+    }
+}

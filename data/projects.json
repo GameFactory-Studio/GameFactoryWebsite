@@ -11,7 +11,7 @@
             },
             "en": {
                 "title": "Lake Of Spirits",
-                "description": "Description",
+                "description": "Welcome to the world of Slavic mythology! Immerse yourself in an exciting adventure with Lake of Ancestors, a unique strategy game that takes you into the Old Slavic world of ancient myths. Create your own settlement, defend it from the merciless barbarians and call on the gods to help you defeat your opponents.Use the blessing of the gods To choose a god from the Slavic pantheon and turn his might against your enemies. Crush the enemy or help your settlers to develop faster. Mechanics - building settlements and buildings; - managing your army; - regular attacks from the enemy's AI; - the possibility of competent management of residents to accelerate the development of your settlement; - a variety of deities with their own unique bonuses",
                 "release_date": "Q2 2025",
                 "platforms": "PC"
             },
@@ -72,6 +72,58 @@
                 "demo": "#",
                 "trailer": "#"
             }
+        },
+        
+        {
+            "id": 4,
+            "slug": "OmegaTimer",
+            "ru": {
+                "title": "Сетевой таймер",
+                "description": "Приложение сетевых таймеров для инструкторов парка виртуальной реальности Omega VR.",
+                "release_date": "Q2 2024",
+                "platforms": "PC, ANDROID"
+            },
+            "en": {
+                "title": "Network Timer",
+                "description": "An application of network timers for instructors of the Omega VR virtual reality park.",
+                "release_date": "Q2 2024",
+                "platforms": "PC, ANDROID"
+            },
+            "images": [
+                "assets/projects/OmegaTimer/OmegaTimer-1.jpg",
+                "assets/projects/OmegaTimer/OmegaTimer-2.jpg",
+                "assets/projects/OmegaTimer/OmegaTimer-3.jpg",
+                "assets/projects/OmegaTimer/OmegaTimer-4.jpg"
+            ],
+            "links": {
+                "demo": "#",
+                "trailer": "#"
+            }
+        },
+        
+        {
+            "id": 5,
+            "slug": "AllesChemistryReactions",
+            "ru": {
+                "title": "Симулятор качественных реакций",
+                "description": "...",
+                "release_date": "Q1 2025",
+                "platforms": "WEB"
+            },
+            "en": {
+                "title": "imulator of qualitative reactions",
+                "description": "...",
+                "release_date": "Q1 2025",
+                "platforms": "WEB"
+            },
+            "images": [
+                "assets/LogoRounded.png"
+            ],
+            "links": {
+                "demo": "#",
+                "trailer": "#"
+            }
         }
+        
     ]
 }

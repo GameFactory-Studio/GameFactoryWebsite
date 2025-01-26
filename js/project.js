@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadProjects() {
     try {
-        const response = await fetch('data/projects.json');
+        const response = await fetch('./data/projects.json');
         if (!response.ok) throw new Error('Network error');
         const data = await response.json();
         return data.projects;

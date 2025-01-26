@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИгроФабрика</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="ИгроФабрика" class="logo-img">
+                <span data-i18n="logoText">ИгроФабрика</span>
+            </a>
+            <div class="controls">
+                <div class="controls">
+                      
+                    <div class="nav-links">
+                        <a href="#games" data-i18n="games">Игры</a>
+                        <a href="#about" data-i18n="about">О нас</a>
+                        <a href="#contact" data-i18n="contact">Контакты</a>
+                        <div class="switch-container">
+                            <label class="theme-switch" style= "display: none;">
+                                <input type="checkbox" id="themeToggle">
+                                <span class="slider round">
+                                    <span class="icon sun">☀️</span>
+                                    <span class="icon moon">🌙</span>
+                                </span>
+                            </label>
+                            
+                            <label class="lang-switch">
+                                <input type="checkbox" id="langToggle">
+                                <span class="slider round">
+                                    <span class="lang-ru">RU</span>
+                                    <span class="lang-en">EN</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                   
+                  
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="heroTitle">Создаём игры мечты</h1>
+            <p data-i18n="heroSubtitle">Профессиональная разработка игр с 2018 года</p>
+            <a href="#games" class="btn" style="margin-top: 2rem;" data-i18n="viewProjects">Наши проекты</a>
+        </div>
+    </section>
+
+    <section class="section" id="games">
+        <h2 data-i18n="ourGames">Наши игры</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="./assets/Logo.png" alt="Game 1" class="game-image">
+                <div class="game-info">
+                    <h3>Тайны Волшебного Леса</h3>
+                    <p>Приключенческая RPG в мире магии и древних артефактов</p>
+                    <a href="#" class="btn">Подробнее</a>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="./assets/Logo.png" alt="Game 2" class="game-image">
+                <div class="game-info">
+                    <h3>Космические Рейнджеры</h3>
+                    <p>Экшен с элементами стратегии в открытом космосе</p>
+                    <a href="#" class="btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2 data-i18n="about">О нас</h2>
+        <p data-i18n="aboutText">ИгроФабрика - современная студия разработки...</p>
+    </section>
+
+    <footer id="contact">
+        <p data-i18n="contactText">Контакты: contact@gamefabrika.ru</p>
+        <p data-i18n="copyright">© 2023 ИгроФабрика. Все права защищены</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

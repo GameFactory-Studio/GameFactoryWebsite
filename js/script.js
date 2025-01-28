@@ -68,6 +68,27 @@ const translations = {
     }
 };
 
+
+ // Загрузка header
+ fetch('./widgets/nav.html')
+ .then(response => response.text())
+ .then(data => {
+
+    document.getElementById('navbar').innerHTML = data;
+
+    // Загрузка footer
+    fetch('./widgets/footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('contact').innerHTML = data;
+        initSwitches();
+        toggleLanguage();
+    });
+ });
+
+
+ 
+
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -101,11 +122,12 @@ function initSwitches() {
     const langToggle = document.getElementById('langToggle');
     
     // Тема
-    themeToggle.checked = localStorage.getItem('theme') === 'light';
-    themeToggle.addEventListener('change', toggleTheme);
+    //themeToggle.checked = localStorage.getItem('theme') === 'light';
+    //themeToggle.addEventListener('change', toggleTheme);
     
     // Язык
     langToggle.checked = localStorage.getItem('language') === 'en';
+    console.log(langToggle);
     langToggle.addEventListener('change', toggleLanguage);
 }
 
@@ -133,16 +155,4 @@ function updateLangSwitch(lang) {
 
 // В init функциях
 document.addEventListener('DOMContentLoaded', () => {
-    initSwitches();
-    
-    // Тема
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    
-    // Язык
-    const savedLang = localStorage.getItem('language') || 'ru';
-    document.documentElement.setAttribute('lang', savedLang);
-    applyTranslations(savedLang);
-    updateLangButton(savedLang);
 });
-

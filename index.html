@@ -8,47 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/vk-frame.css">
     <link rel="stylesheet" href="css/projects.css">
+
+    
+    <script src="js/script.js"></script>
+    <script src="js/project.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="#" class="logo">
-                <img src="./assets/Logo.png" alt="ИгроФабрика" class="logo-img noselect">
-                <span data-i18n="logoText" class="noselect">ИгроФабрика</span>
-            </a>
-            <div class="controls">
-                <div class="controls">
-                      
-                    <div class="nav-links">
-                        <a href="#projects" data-i18n="projects" class="noselect">Проекты</a>
-                        <!-- <a href="#about" data-i18n="about" class="noselect">О нас</a> -->
-                        <a href="#contact" data-i18n="contact" class="noselect">Контакты</a>
-                        <div class="switch-container">
-                            <label class="theme-switch" style= "display: none;">
-                                <input type="checkbox" id="themeToggle">
-                                <span class="slider round">
-                                    <span class="icon sun">☀️</span>
-                                    <span class="icon moon">🌙</span>
-                                </span>
-                            </label>
-                            
-                            <label class="lang-switch">
-                                <input type="checkbox" id="langToggle">
-                                <span class="slider round">
-                                    <span class="lang-ru noselect">RU</span>
-                                    <span class="lang-en noselect">EN</span>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                   
-                  
-                </div>
-            </div>
-        </div>
-    </nav>
+    <nav class="navbar" id="navbar"></nav>
 
     <section class="hero">
         <div class="hero-content">
@@ -87,66 +54,7 @@
     </section> -->
 
 
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 data-i18n="socialTitle">Социальные сети</h3>
-                <div class="social-grid">
-                    <a href="https://vk.com/gamefabricstudio" target="_blank" class="social-link">
-                        <svg class="social-icon" viewBox="0 0 24 24">
-                            <path d="M12.7 18.3H13.8C13.8 18.3 14.2 18.3 14.4 18.1C14.5 18 14.6 17.7 14.6 17.4C14.6 17 14.6 16.6 14.7 16.3C14.8 16 15 15.8 15.2 15.7C15.4 15.6 15.7 15.6 15.9 15.6C16.3 15.6 16.6 15.7 16.8 15.9C17 16.1 17.2 16.4 17.3 16.7L18.4 18.3H19.8L18.2 16.4C17.7 15.7 17.3 15.2 17 14.7C16.9 14.5 17 14.3 17.2 14.1C17.8 13.5 18.4 12.8 18.9 12.1C19.4 11.4 19.8 10.7 19.9 10C20 9.6 19.8 9.3 19.4 9.3H17.8C17.6 9.3 17.4 9.4 17.3 9.6C17.2 9.8 17.1 10 17.1 10.2C17 10.6 16.8 11.2 16.5 11.7C16.2 12.2 15.9 12.6 15.6 12.9C15.4 13.1 15.1 13.2 14.9 13.1C14.8 13.1 14.7 13 14.6 12.9C14.5 12.8 14.5 12.7 14.5 12.6V10.1C14.5 9.7 14.3 9.3 13.9 9.3H11.9C11.7 9.3 11.5 9.5 11.5 9.7C11.5 10 11.6 10.3 11.7 10.6C12 11.5 12.6 12.3 13.1 13.1C13.3 13.4 13.5 13.6 13.5 13.8C13.5 13.9 13.4 14 13.3 14.1C13.2 14.2 13 14.2 12.9 14.2C12.3 14.1 11.4 13.5 10.7 12.6C9.9 11.6 9.4 10.6 9.3 10.2C9.3 10 9.2 9.8 9 9.7C8.9 9.6 8.7 9.5 8.5 9.5H7C6.6 9.5 6.4 9.8 6.5 10.1C6.6 10.9 7.4 12.4 8.9 14.1C10.5 15.9 12.1 16.8 12.7 18.3Z"/>
-                        </svg>
-                    </a>
-                    
-                    <!-- <a href="https://t.me" target="_blank" class="social-link">
-                        <svg class="social-icon" viewBox="0 0 24 24">
-                            <path d="M9.78 18.65L10.06 14.42L17.74 7.5C18.08 7.19 17.67 7.04 17.22 7.31L7.74 13.3L3.64 12C2.76 11.75 2.75 11.14 3.84 10.7L19.81 4.54C20.54 4.21 21.24 4.72 20.96 5.84L18.24 18.65C18.05 19.56 17.5 19.78 16.74 19.36L12.6 16.3L10.61 18.23C10.38 18.46 10.19 18.65 9.78 18.65Z"/>
-                        </svg>
-                    </a>
-    
-                    <a href="https://youtube.com" target="_blank" class="social-link">
-                        <svg class="social-icon" viewBox="0 0 24 24">
-                            <path d="M10 16.5L16 12L10 7.5V16.5M12 2C17.5 2 22 6.5 22 12C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2Z"/>
-                        </svg>
-                    </a> -->
-                </div>
-            </div>
-    
-            <div class="footer-section">
-                <h3 data-i18n="cooperation">Сотрудничество</h3>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z"/>
-                        </svg>
-                        <a href="mailto:partners@gamefabrika.ru" class="contact-link">partners@gamefabrika.ru</a>
-                    </div>
-                    
-                    <!-- <div class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
-                        </svg>
-                        <a href="tel:+78005553535" class="contact-link">+7 (800) 555-35-35</a>
-                    </div> -->
-                </div>
-            </div>
-    
-            <!-- <div class="footer-section">
-                <h3 data-i18n="linksTitle">Полезное</h3>
-                <nav class="footer-nav">
-                    <a href="/careers" data-i18n="linkCareers">Вакансии</a>
-                    <a href="/docs" data-i18n="linkDocs">Документация</a>
-                    <a href="/press" data-i18n="linkPress">Пресс-центр</a>
-                </nav>
-            </div> -->
-        </div>
-    
-        <div class="footer-bottom">
-            <p data-i18n="copyright">© 2023 ИгроФабрика. Все права защищены</p>
-        </div>
-    </footer>
+    <footer id="contact"></footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/project.js"></script>
 </body>
 </html>

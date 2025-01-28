@@ -2,18 +2,21 @@
     "projects": [
         {
             "id": 1,
+            "isEnableView": true,
             "slug": "LakeOfSpirits",
             "ru": {
                 "title": "Озеро предков",
                 "description": "Добро пожаловать в мир славянской мифологии! Погрузитесь в захватывающее приключение с Озеро предков, уникальной стратегией, которая переносит вас в старославянский мир древних мифов. Создай своё поселение, защищайте его от беспощадных варваров и взывайте к богам, чтобы они помогли одолеть ваших противников.Используй благословение богов Выберите бога из славянского пантеона и обратите его мощь против своих врагов. Сокрушите противника или помогите своим поселенцам быстрее развиваться. Механики - строительство поселения и зданий; - управление своей армией; - регулярные нападения со стороны ИИ противника; - возможность грамотного менеджмента жителями для ускорения развития вашего поселения; - множество божеств со своими уникальными бонусами",
                 "release_date": "Q2 2025",
-                "platforms": "PC"
+                "platforms": "PC",
+                "render-description": "assets/projects/LakeOfSpirits/project-ru.html"
             },
             "en": {
                 "title": "Lake Of Spirits",
                 "description": "Welcome to the world of Slavic mythology! Immerse yourself in an exciting adventure with Lake of Ancestors, a unique strategy game that takes you into the Old Slavic world of ancient myths. Create your own settlement, defend it from the merciless barbarians and call on the gods to help you defeat your opponents.Use the blessing of the gods To choose a god from the Slavic pantheon and turn his might against your enemies. Crush the enemy or help your settlers to develop faster. Mechanics - building settlements and buildings; - managing your army; - regular attacks from the enemy's AI; - the possibility of competent management of residents to accelerate the development of your settlement; - a variety of deities with their own unique bonuses",
                 "release_date": "Q2 2025",
-                "platforms": "PC"
+                "platforms": "PC",
+                "render-description": "assets/projects/LakeOfSpirits/project-en.html"
             },
             "images": [
                 "assets/projects/LakeOfSpirits/LakeOfSpirits-1.jpg",
@@ -27,18 +30,21 @@
         },
         {
             "id": 2,
+            "isEnableView": true,
             "slug": "VirtualWorkshop-ChemistryDLC",
             "ru": {
                 "title": "Виртуальная мастерская / Химия",
                 "description": "Наше решение представляет из себя виртуальное пространство, в котором пользователи смогут проводить эксперименты и играться с химическими элементами в виртуальной реальности. Изучить таблицу менделеева, увидеть строение атома, смешать элементы вместе - все это можно попробовать у нас в мастерской! Это не только интересно и увлекательно, но и полезно! Это может стать профориентационным и образовательным контентом.",
                 "release_date": "Q3 2025",
-                "platforms": "VR"
+                "platforms": "VR",
+                "render-description": "assets/projects/VirtualWorkshop/project-ru.html"
             },
             "en": {
                 "title": "VirtualWorkshop / ChemistryDLC",
                 "description": "Our solution is a virtual space where users can develop critical thinking skills, conduct experiments, and play with chemical elements in virtual reality. Study the periodic table, see the structure of the atom, mix the elements together - all this can be tried in our workshop! It's not only interesting and exciting, but also useful! This can become career-oriented educational content.",
                 "release_date": "Q3 2025",
-                "platforms": "VR"
+                "platforms": "VR",
+                "render-description": "assets/projects/VirtualWorkshop/project-en.html"
             },
             "images": [
                 "assets/projects/VirtualWorkshop/VirtualWorkshop-Chemistry-1.jpg",
@@ -52,6 +58,7 @@
         
         {
             "id": 3,
+            "isEnableView": false,
             "slug": "Platform",
             "ru": {
                 "title": "Платформа",
@@ -76,18 +83,21 @@
         
         {
             "id": 4,
+            "isEnableView": true,
             "slug": "OmegaTimer",
             "ru": {
                 "title": "Сетевой таймер",
                 "description": "Приложение сетевых таймеров для инструкторов парка виртуальной реальности Omega VR.",
                 "release_date": "Q2 2024",
-                "platforms": "PC, ANDROID"
+                "platforms": "PC, ANDROID",
+                "render-description": "assets/projects/OmegaTimer/project-ru.html"
             },
             "en": {
                 "title": "Network Timer",
                 "description": "An application of network timers for instructors of the Omega VR virtual reality park.",
                 "release_date": "Q2 2024",
-                "platforms": "PC, ANDROID"
+                "platforms": "PC, ANDROID",
+                "render-description": "assets/projects/OmegaTimer/project-en.html"
             },
             "images": [
                 "assets/projects/OmegaTimer/OmegaTimer-1.jpg",
@@ -103,18 +113,21 @@
         
         {
             "id": 5,
+            "isEnableView": false,
             "slug": "AllesChemistryReactions",
             "ru": {
                 "title": "Симулятор качественных реакций",
                 "description": "...",
                 "release_date": "Q1 2025",
-                "platforms": "WEB"
+                "platforms": "WEB",
+                "render-description": "assets/projects/LakeOfSpirits/project-ru.html"
             },
             "en": {
                 "title": "imulator of qualitative reactions",
                 "description": "...",
                 "release_date": "Q1 2025",
-                "platforms": "WEB"
+                "platforms": "WEB",
+                "render-description": "assets/projects/LakeOfSpirits/project-ru.html"
             },
             "images": [
                 "assets/LogoRounded.png"

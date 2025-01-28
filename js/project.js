@@ -1,36 +1,36 @@
 // Инициализация слайдера
 document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slide');
-    const dotsContainer = document.querySelector('.dots');
-    let currentSlide = 0;
+    // const slides = document.querySelectorAll('.slide');
+    // const dotsContainer = document.querySelector('.dots');
+    // let currentSlide = 0;
 
-    // Создание точек
-    slides.forEach((_, idx) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if(idx === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => changeSlide(idx));
-        dotsContainer.appendChild(dot);
-    });
+    // // Создание точек
+    // slides.forEach((_, idx) => {
+    //     const dot = document.createElement('div');
+    //     dot.classList.add('dot');
+    //     if(idx === 0) dot.classList.add('active');
+    //     dot.addEventListener('click', () => changeSlide(idx));
+    //     dotsContainer.appendChild(dot);
+    // });
 
-    // Кнопки навигации
-    document.querySelector('.prev').addEventListener('click', () => {
-        changeSlide(currentSlide - 1);
-    });
+    // // Кнопки навигации
+    // document.querySelector('.prev').addEventListener('click', () => {
+    //     changeSlide(currentSlide - 1);
+    // });
 
-    document.querySelector('.next').addEventListener('click', () => {
-        changeSlide(currentSlide + 1);
-    });
+    // document.querySelector('.next').addEventListener('click', () => {
+    //     changeSlide(currentSlide + 1);
+    // });
 
-    function changeSlide(n) {
-        currentSlide = (n + slides.length) % slides.length;
-        slides.forEach((slide, idx) => {
-            slide.classList.toggle('active', idx === currentSlide);
-        });
-        document.querySelectorAll('.dot').forEach((dot, idx) => {
-            dot.classList.toggle('active', idx === currentSlide);
-        });
-    }
+    // function changeSlide(n) {
+    //     currentSlide = (n + slides.length) % slides.length;
+    //     slides.forEach((slide, idx) => {
+    //         slide.classList.toggle('active', idx === currentSlide);
+    //     });
+    //     document.querySelectorAll('.dot').forEach((dot, idx) => {
+    //         dot.classList.toggle('active', idx === currentSlide);
+    //     });
+    // }
 });
 
 
@@ -47,6 +47,7 @@ async function loadProjects() {
 }
 
 function renderProjectCard(project, lang) {
+    if(project["isEnableView"] == false) return '';
     return `
         <div class="project-card">
             <div class="mini-slider">

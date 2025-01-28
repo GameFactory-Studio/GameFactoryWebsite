@@ -21,10 +21,16 @@ async function loadProjectDetails() {
 }
 
 function renderProjectDetails(project) {
+    if(project["isEnableView"] == false) return;
+
     const lang = document.documentElement.getAttribute('lang');
     const container = document.getElementById('project-container');
     
-    const html = `
+
+    fetch(project[lang]['render-description'])
+    .then(response => response.text())
+    .then(render_description => {
+        const html = `
         <div class="project-slider">
             ${renderSlider(project.images)}
         </div>
@@ -35,7 +41,7 @@ function renderProjectDetails(project) {
                 <span>${project[lang].release_date}</span>
                 <span>${project[lang].platforms}</span>
             </div>
-            <p class="project-description">${project[lang].description}</p>
+            <p class="project-description">${render_description}</p>
             
             <div class="project-links">
                 <!-- <a href="${project.links.demo}" class="btn" data-i18n="playDemo">Играть в демо</a>-->
@@ -43,11 +49,14 @@ function renderProjectDetails(project) {
                 <a href="index.html#projects" class="btn back-btn" data-i18n="backToProjects">← К проектам</a>
             </div>
         </div>
-    `;
+        `;
 
-    container.innerHTML = html;
-    applyTranslations(lang); // Применяем переводы
-    initSlider(); // Инициализация слайдера
+        container.innerHTML = html;
+        applyTranslations(lang); // Применяем переводы
+        initSlider(); // Инициализация слайдера
+    });
+
+
 }
 
 function renderSlider(images) {

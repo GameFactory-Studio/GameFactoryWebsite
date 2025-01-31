@@ -1,3 +1,138 @@
+const translations = {
+    ru: {
+        logoText: "ИгроФабрика",
+        projects: "Проекты",
+        about: "О нас",
+        contact: "Контакты",
+        heroTitle: "Формируем будущее вместе",
+        heroSubtitle: "Профессиональная разработка с 2024 года",
+        viewProjects: "Наши проекты",
+        ourGames: "Наши игры",
+        ourProjects: "Наши проекты",
+        aboutText: 'Мы крутое сообщество создателей ПО и контента "ИгроФабрика" 😎 Переходи на нашу сторону! 😉.',
+        contactText: "Контакты: *В разработке*",
+        copyright: "© 2025 ИгроФабрика. Все права защищены",
+        socialTitle: "Мы в соцсетях",
+        socialVK: "ВКонтакте",
+        socialTG: "Telegram",
+        socialYT: "YouTube",
+        usefulLinks: "Полезные ссылки",
+        linkDocs: "Документация",
+        linkBlog: "Блог разработчиков",
+        linkCareers: "Вакансии",
+        cooperation: "Сотрудничество",
+        linksTitle: "Полезное",
+        linkPress: "Пресс-центр",
+        projectTitle: "Детали проекта",
+        projectName: "Космические Рейнджеры",
+        releaseDate: "Дата выхода:",
+        platforms: "Платформы:",
+        playDemo: "Играть в демо",
+        viewTrailer: "Смотреть трейлер",
+        backToProjects: "← К проектам",
+        viewDetails: "Подробнее",
+        noProjects: "Проекты не найдены",
+    },
+    en: {
+        logoText: "GameFactory",
+        projects: "Projects",
+        about: "About",
+        contact: "Contact",
+        heroTitle: "Shaping the future together",
+        heroSubtitle: "Professional development since 2024",
+        viewProjects: "Our Projects",
+        ourProjects: "Our Projects",
+        aboutText: 'We are a cool community of creators of software and content "Game Factory" 😎 Come over to our side! 😉.',
+        contactText: "Contacts: *Develop*",
+        copyright: "© 2025 GameFactory. All rights reserved",
+        socialTitle: "Follow Us",
+        socialVK: "VKontakte",
+        socialTG: "Telegram",
+        socialYT: "YouTube",
+        usefulLinks: "Useful Links",
+        linkDocs: "Documentation",
+        linkBlog: "Dev Blog",
+        linkCareers: "Careers",
+        cooperation: "Partnership",
+        linksTitle: "Resources",
+        linkPress: "Press Center",
+        projectTitle: "Project Details",
+        projectName: "Space Rangers",
+        releaseDate: "Release Date:",
+        platforms: "Platforms:",
+        playDemo: "Play Demo",
+        viewTrailer: "Watch Trailer",
+        backToProjects: "← Back to Projects",
+        viewDetails: "View Details",
+        noProjects: "No projects found",
+    }
+};
+
+ // Загрузка header
+ fetch('./widgets/nav.html')
+ .then(response => response.text())
+ .then(data => {
+
+    document.getElementById('navbar').innerHTML = data;
+
+    // Загрузка footer
+    fetch('./widgets/footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('contact').innerHTML = data;
+        initSwitches();
+        applyTranslations(localStorage.getItem('language'));
+
+        loadProjectDetails();
+
+        const langToggle = document.getElementById('langToggle');
+        langToggle.addEventListener('change', BindToggleLanguageProjectInfo);
+    });
+ });
+
+
+ function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+}
+
+function toggleLanguage() {
+    //const currentLang = document.documentElement.getAttribute('lang');
+    const currentLang = localStorage.getItem('language');
+    
+    const newLang = currentLang === 'ru' ? 'en' : 'ru';
+
+    document.documentElement.setAttribute('lang', newLang);
+    localStorage.setItem('language', newLang);
+    applyTranslations(newLang);
+    updateLangButton(newLang);
+}
+
+
+function applyTranslations(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        //console.log(el, key, lang, translations[lang]);
+        el.textContent = translations[lang][key];
+    });
+}
+
+// Инициализация переключателей
+function initSwitches() {
+    const themeToggle = document.getElementById('themeToggle');
+    const langToggle = document.getElementById('langToggle');
+    
+    // Тема
+    //themeToggle.checked = localStorage.getItem('theme') === 'light';
+    //themeToggle.addEventListener('change', toggleTheme);
+    
+    // Язык
+    langToggle.checked = localStorage.getItem('language') === 'en';
+    langToggle.addEventListener('change', toggleLanguage);
+}
+
 async function loadProjectDetails() {
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('id');
@@ -22,14 +157,15 @@ async function loadProjectDetails() {
 
 function renderProjectDetails(project) {
     if(project["isEnableView"] == false) return;
-
-    const lang = document.documentElement.getAttribute('lang');
+    console.log(project);
+    const lang = localStorage.getItem('language');
     const container = document.getElementById('project-container');
     
-
+    
     fetch(project[lang]['render-description'])
     .then(response => response.text())
     .then(render_description => {
+        console.log(render_description);
         const html = `
         <div class="project-slider">
             ${renderSlider(project.images)}
@@ -113,6 +249,9 @@ function initSlider(){
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+
+async function BindToggleLanguageProjectInfo() {
+    const lang = localStorage.getItem('language');
     loadProjectDetails();
-});
+    applyTranslations(lang);
+}

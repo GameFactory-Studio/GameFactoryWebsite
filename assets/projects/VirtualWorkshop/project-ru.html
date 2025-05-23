@@ -1,6 +1,341 @@
-<p>
-    Наше решение представляет из себя виртуальное пространство, в котором пользователи смогут проводить эксперименты и играться с химическими элементами в <span class="highlight">виртуальной реальности</span>. Изучить таблицу Менделеева, увидеть строение атома, смешать элементы вместе — все это можно попробовать у нас в мастерской!
-</p>
-<p>
-    Это не только интересно и увлекательно, но и полезно! Это может стать профориентационным и образовательным контентом.
-</p>
+
+<style>
+.vr-chemistry-project {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.vr-product,
+.vr-section,
+.vr-benefits,
+.vr-pricing {
+    margin: 1.5rem 0;
+    padding: 1rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.benefit-item {
+    /* background: #f0f9ff; */
+    border: #2ecc71 1px solid;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.price-card {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.5rem;
+    /* border: 1px solid #e0e0e0; */
+    border-radius: 12px;
+    border: #2ecc71 1px solid;
+
+}
+
+.price {
+    font-size: 1.75rem;
+    color: #2ecc71;
+    margin: 1rem 0;
+}
+
+.vr-button {
+    background: #3498db;
+    
+    /* color: white; */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.highlighted {
+    border-color: #2ecc71;
+
+}
+
+.discount {
+    color: #e67e22;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+/* Существующие стили... */
+
+.vr-requirements,
+.vr-equipment {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    /* background: #f8fafc; */
+    border-radius: 12px;
+
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+    
+}
+
+.equipment-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+
+}
+
+.req-item,
+.eq-item {
+    /* background: white; */
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border: #2ecc71 1px solid;
+
+}
+
+.eq-item {
+    flex: 1;
+    min-width: 280px;
+}
+
+.req-item h5,
+.eq-item h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.req-item p,
+.eq-item p {
+    margin: 0;
+}
+/* Существующие стили... */
+
+.vr-advantages {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    /* background: #fff9f2; */
+    border-radius: 12px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.adv-item {
+    text-align: center;
+    padding: 1.5rem;
+    /* background: white; */
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border: #2ecc71 1px solid;
+
+}
+
+.adv-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.vr-supported-devices {
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+}
+
+.devices-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.device-item {
+    flex: 0 1 200px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.device-logo {
+    /* width: 80px; */
+    height: 130px;
+    margin: 0 auto 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.device-item h5 {
+    /* color: #2ecc71; */
+    margin: 0.5rem 0;
+}
+
+.device-item p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+</style>
+
+<div class="vr-chemistry-project">
+    <div class="vr-product">
+        <h3>Продукт</h3>
+        <p>Программное обеспечение для гарнитур виртуальной реальности</p>
+        <br>
+        <div class="vr-mission">
+            <h4>Миссия</h4>
+            <p>Преобразовать традиционное обучение химии, сделав его безопасным, доступным и увлекательным для каждого ученика, независимо от его местоположения или ресурсов. Мы стремимся стирать границы между теорией и практикой, создавая инновационные инструменты для образования будущего.</p>
+        </div>
+        <br>
+        <div class="vr-essence">
+            <h4>Основная суть</h4>
+            <p>Проект представляет собой виртуальную лабораторию, где пользователи в VR-гарнитурах могут проводить химические эксперименты в реалистичной, но полностью безопасной среде.</p>
+        </div>
+    </div>
+
+    <div class="vr-benefits">
+        <h4>Польза обществу</h4>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h5>Экологичность</h5>
+                <p>Снижение потребления материалов</p>
+            </div>
+            <div class="benefit-item">
+                <h5>Безопасность</h5>
+                <p>Исключение рисков работы с веществами</p>
+            </div>
+            <div class="benefit-item">
+                <h5>Повышение интереса</h5>
+                <p>Игровой формат обучения</p>
+            </div>
+        </div>
+    </div>
+
+ <div class="vr-advantages">
+        <h3>Наши преимущества</h3>
+        <div class="advantages-grid">
+            <div class="adv-item">
+                <div class="adv-icon">✅</div>
+                <h5>Реалистичная физика реакций</h5>
+                <p>Точное моделирование химических процессов</p>
+            </div>
+            <div class="adv-item">
+                <div class="adv-icon">🕒</div>
+                <h5>Экономия времени</h5>
+                <p>Мгновенная подготовка лаборатории к работе</p>
+            </div>
+            <div class="adv-item">
+                <div class="adv-icon">🎓</div>
+                <h5>Экспертная поддержка</h5>
+                <p>Встроенные подсказки и учебные материалы</p>
+            </div>
+            <div class="adv-item">
+                <div class="adv-icon">🔄</div>
+                <h5>Постоянные обновления</h5>
+                <p>Регулярное добавление новых экспериментов</p>
+            </div>
+            <div class="adv-item">
+                <div class="adv-icon">📭</div>
+                <h5>Платформа</h5>
+                <p>Платформа по доставке и обновлению контента</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="vr-equipment">
+        <h3>Необходимое оборудование</h3>
+        <div class="equipment-list">
+            <div class="eq-item">
+                <h5>VR-гарнитура</h5>
+                <p>Oculus Rift S, HTC Vive или совместимые аналоги</p>
+            </div>
+            <div class="eq-item">
+                <h5>Контроллеры</h5>
+                <p>2 ручных контроллера с трекингом</p>
+            </div>
+            <div class="eq-item">
+                <h5>Персональный компьютер</h5>
+                <p>Система трекинга помещения (для некоторых моделей)</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="vr-requirements">
+        <h3>Минимальные системные требования</h3>
+        <ul class="vr-specs-list">
+            <li><b>Операционная система:</b> Windows 10 (64-bit) или новее</li>
+            <li><b>Процессор:</b> Intel Core i5-4590 / AMD FX 8350</li>
+            <li><b>Оперативная память:</b> 8 GB RAM</li>
+            <li><b>Видеокарта:</b> NVIDIA GTX 1060 / AMD Radeon RX 480</li>
+            <li><b>Хранилище:</b> 10 GB свободного места</li>
+            <li><b>Подключение:</b> HDMI 1.3, USB 3.0 порт, WiFo 5ГГц</li>
+        </ul>
+    </div>
+
+    <div class="vr-supported-devices">
+        <h3>Поддерживаемые VR-гарнитуры</h3>
+        <div class="devices-list">
+            <div class="device-item">
+                <img src="./assets/projects/VirtualWorkshop/Oculus.png" class="device-logo">
+                <h5>Meta Quest 2/3</h5>
+            </div>
+            <div class="device-item">
+                <img src="./assets/projects/VirtualWorkshop/Valve.png" class="device-logo">
+                <h5>Valve Index</h5>
+            </div>
+            <div class="device-item">
+                <img src="./assets/projects/VirtualWorkshop/Vive.png" class="device-logo">
+                <h5>HTC Vive Pro</h5>
+            </div>
+            <div class="device-item">
+                <img src="./assets/projects/VirtualWorkshop/Pico.png" class="device-logo">
+                <h5>Pico 4</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="vr-pricing">
+
+        <h3>Стоимость лицензий</h3>
+        <div class="pricing-cards">
+            <div class="price-card">
+                <h5>1 год</h5>
+                <div class="price">40 000 ₽</div>
+                <button class="vr-button">Выбрать</button>
+            </div>
+            <div class="price-card highlighted">
+                <h5>2 года</h5>
+                <div class="price">75 000 ₽</div>
+                <div class="discount">Экономия 5 000 ₽</div>
+                <button class="vr-button">Выбрать</button>
+            </div>
+            <div class="price-card highlighted">
+                <h5>3 года</h5>
+                <div class="price">100 000 ₽</div>
+                <div class="discount">Экономия 20 000 ₽</div>
+                <button class="vr-button">Выбрать</button>
+            </div>
+        </div>
+    </div>
+</div>
